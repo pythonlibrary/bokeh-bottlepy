@@ -7,9 +7,10 @@ from bokeh.transform import dodge
 from bokeh.embed import components
 
 
-from bottle import Bottle, run, \
+from bottle import Bottle, \
      template, debug, static_file
 
+import os
 
 
 def get_df_from_source():
@@ -113,4 +114,7 @@ def index():
             "developer_organization":"pythonlibrary.net"}
     return template('index', data = data)
 
-run(app, host='localhost', port = 8080)
+
+if __name__ == "__main__":
+    port=int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port, debug=True)
