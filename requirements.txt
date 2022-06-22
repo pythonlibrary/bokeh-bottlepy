@@ -2,7 +2,7 @@ bokeh==1.4.0
 bottle==0.12.18
 Jinja2==2.11.0
 MarkupSafe==1.1.1
-numpy==1.18.1
+numpy==1.22.0
 packaging==20.1
 pandas==0.25.3
 Pillow==7.0.0
